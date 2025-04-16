@@ -1,0 +1,95 @@
+/* Font and Color: clean, modern, vibrant */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Animated rainbow name */
+.animated-name {
+  background: linear-gradient(270deg, #00ffff, #ff00ff, #00ff88, #ffaa00);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text-animation 6s ease infinite;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes rainbow-text-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navbar background with blur & gradient */
+.custom-navbar {
+  max-width: 100%;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(90deg, #1e3c72cc, #2a5298cc); /* with opacity */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeSlideDown 1s ease-in-out;
+}
+
+/* Brand hover effect */
+.navbar-brand:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Nav link styles */
+.navbar-nav .nav-link {
+  color: #e0e0e0;
+  margin: 0 0.6rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00ffff;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #00ffff;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active link styling */
+.active-link {
+  color: #00ffff !important;
+  font-weight: 600;
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #00ffff;
+  bottom: 0;
+  left: 0;
+}
+
+/* Fade down animation on load */
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

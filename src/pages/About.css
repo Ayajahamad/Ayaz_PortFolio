@@ -1,0 +1,63 @@
+.about-section {
+    background: url('../assets/images/bg-light-pattern.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+  }
+  
+  .about-card {
+    max-width: 1100px;  /* Adjusting width of the card */
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    border: 1px solid rgba(200, 200, 200, 0.3);
+    padding: 3rem;
+  }
+  
+  .profile-img {
+    max-width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border: 5px solid #2a5298;
+  }
+  
+  .about-intro {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333;
+  }
+  
+  .section-title {
+    text-align: left; /* This will center the "About Me" title */
+    text-decoration: underline;
+    color: #1e3c72;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-details {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .resume-btn {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    border: none;
+    transition: background 0.3s ease-in-out;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .resume-btn:hover {
+    background: linear-gradient(90deg, #2a5298, #1e3c72);
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,111 @@
+#portfolio {
+  background: 
+      linear-gradient(to right, rgba(248, 249, 250, 0.5), rgba(233, 236, 239, 0.5)),
+      url('../assets/images/project-sectio1.jpg'); /* <-- change path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+  .section-title {
+    color: #1e3c72;
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 2.5rem;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    min-height: 500px;
+  }
+  
+  .project-image {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .project-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #1e3c72;
+  }
+  
+  .project-description {
+    color: #555;
+    flex-grow: 1;
+  }
+  
+  .project-tech-tag {
+    display: inline-block;
+    background-color: #2a5298;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 10px;
+    margin: 2px 4px 2px 0;
+  }
+  
+  .project-btn {
+    border: none;
+    background-color: #1e3c72;
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 12px;
+    transition: background 0.3s;
+  }
+  
+  .project-btn:hover {
+    background-color: #2a5298;
+  }
+  
+  .project-grid-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .project-grid-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .project-grid-image {
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .project-grid-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .project-grid-tags {
+    font-size: 0.75rem;
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .project-image {
+      height: 250px;
+    }
+  
+    .project-grid-title {
+      font-size: 0.85rem;
+    }
+  }
+  

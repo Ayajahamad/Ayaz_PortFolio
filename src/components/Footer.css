@@ -1,0 +1,59 @@
+/* Background Gradient for Footer */
+.footer-bg {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer Text Styling */
+  .footer-text {
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer-text:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  /* Social Icons Styling */
+  .footer-icon {
+    margin: 0 12px;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  /* Hover Effects for Social Icons */
+  .footer-icon:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+    text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6);
+  }
+  
+  /* .linkedin:hover {
+    color: #ffcc00;
+    transform: rotate(30deg);
+  }
+  
+  .github:hover {
+    color: #ffcc00;
+  }
+  
+  .twitter:hover {
+    color: #ffcc00;
+  } */
+  
+  /* Contact Link Styling */
+  .footer-contact {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    letter-spacing: 0.3s ease;
+  }
+  
+  .footer-contact:hover {
+    color: #ffcc00;
+    letter-spacing: 1px;
+  }
+  
