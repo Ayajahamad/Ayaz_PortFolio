@@ -1,0 +1,25 @@
+.contact-form-background {
+    background-image: url('../assets/images/project-section.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-card {
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+  }
+  
+  .custom-submit-btn {
+    border-radius: 10px;
+    background: rgba(30, 60, 114, 0.9);
+    color: #fff;
+    border: none;
+  }
+  
