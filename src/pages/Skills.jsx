@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Container, Row, Col, Card, Button, ButtonGroup } from 'react-bootstrap';
 import { 
   FaPython, FaJs, FaHtml5, FaCss3Alt, FaReact, FaDatabase, FaServer, FaTable, FaChartBar,
-  FaCode, FaClipboard, FaCogs, FaFlask, FaBold
+  FaCode, FaClipboard, FaCogs, FaFlask, FaBold, FaCloud
 } from 'react-icons/fa';
 import SkillCard from '../pages/SkillCard';
 
@@ -24,7 +24,10 @@ const skillsData = [
   { name: "DBeaver", level: 85, category: "Tools", icon: <FaClipboard className="text-primary" size={40} /> },
   { name: "PyCharm", level: 80, category: "Tools", icon: <FaCogs className="text-warning" size={40} /> },
   { name: "Postman", level: 85, category: "Tools", icon: <FaFlask className="text-danger" size={40} /> },
-  { name: "Bootstrap", level: 80, category: "Front End", icon: <FaBold className="text-purple-500" size={40} /> }
+  { name: "Bootstrap", level: 80, category: "Front End", icon: <FaBold className="text-purple-500" size={40} /> },
+  { name: "Azure", level: 70, category: "Cloud", icon: <FaCloud className="text-blue-600" size={40} /> }
+
+
 ];
 
 const filterCategories = [

@@ -1,20 +1,60 @@
 import { useState } from "react";
 import { Form, Button, Container, Card, Row, Col } from "react-bootstrap";
-import "./ContactForm.css"; // Import your custom CSS
+import "./ContactForm.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    alert("Message sent!");
-    setFormData({ name: "", email: "", message: "" });
+const handleSubmit = (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  // Create unique callback name
+  const callbackName = `jsonp_${Date.now()}`;
+  
+  // Create URL parameters
+  const params = new URLSearchParams({
+    name: formData.name,
+    email: formData.email,
+    message: formData.message,
+    callback: callbackName
+  });
+
+  // Create script element
+  const script = document.createElement('script');
+  script.src = `https://script.google.com/macros/s/AKfycbyXJi-utbIDB-s58SKIO1PPBzaO5fI_ECFGuVpa5NwiNWGMMZ2mQcofh0TECuS9sKTs/exec?${params}`;
+
+  // Define callback handler
+  window[callbackName] = (response) => {
+    // Cleanup
+    delete window[callbackName];
+    document.body.removeChild(script);
+    setIsSubmitting(false);
+
+    if (response.success) {
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } else {
+      alert(`Error: ${response.error || 'Unknown error'}`);
+    }
   };
+
+  // Add error handler
+  script.onerror = () => {
+    delete window[callbackName];
+    document.body.removeChild(script);
+    setIsSubmitting(false);
+    alert("Failed to connect to server");
+  };
+
+  // Execute request
+  document.body.appendChild(script);
+};
 
   return (
     <div className="contact-form-background">
@@ -23,6 +63,7 @@ const ContactForm = () => {
           <Card.Body className="p-4">
             <h2 className="text-center fw-bold mb-4">Get in Touch</h2>
             <Form onSubmit={handleSubmit}>
+              {/* Keep the existing form structure */}
               <Row className="mb-3">
                 <Col xs={12} md={6}>
                   <Form.Group controlId="contactName">
@@ -69,8 +110,9 @@ const ContactForm = () => {
                   type="submit"
                   size="md"
                   className="px-4 custom-submit-btn"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </div>
             </Form>

@@ -1,6 +1,6 @@
 import { Container, Row, Col, Image, Badge, Button, Card } from "react-bootstrap";
 import resumeFile from "../assets/resume/Ayaj_Ahamad_Software_Developer.pdf";
-import profile from "../assets/images/profile.avif";
+import profile from "../assets/images/profile.jpeg";
 import './About.css'; // 👈 Make sure this CSS file exists and is imported
 
 const About = () => {

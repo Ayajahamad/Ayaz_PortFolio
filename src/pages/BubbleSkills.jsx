@@ -29,6 +29,7 @@ const skillsData = [
   { name: "PyCharm", level: 80, category: "Tools" },
   { name: "Postman", level: 85, category: "Tools" },
   { name: "Bootstrap", level: 80, category: "Front End" },
+  { name: "Azure", level: 80, category: "Tools" },
 ];
 
 const categories = [
