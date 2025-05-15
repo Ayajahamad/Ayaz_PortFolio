@@ -37,7 +37,7 @@ const handleSubmit = (e) => {
     setIsSubmitting(false);
 
     if (response.success) {
-      alert("Message sent successfully!");
+      alert("Message sent successfully! \n\nWill Get back to you soon..!");
       setFormData({ name: "", email: "", message: "" });
     } else {
       alert(`Error: ${response.error || 'Unknown error'}`);
