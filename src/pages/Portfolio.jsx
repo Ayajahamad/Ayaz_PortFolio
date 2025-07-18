@@ -2,6 +2,11 @@ import { useState } from "react";
 import { Container, Card, Button, Row, Col } from "react-bootstrap";
 import cafe from "../assets/images/cafe.png";
 import emp from "../assets/images/emp.png";
+import api from "../assets/images/api_dev.jpg";
+import db from "../assets/images/db_design.png";
+import atd from "../assets/images/attendence.png";
+import senc from "../assets/images/senscio.jpg";
+
 import "./Portfolio.css"; // Import custom CSS
 
 const projects = [
@@ -10,7 +15,7 @@ const projects = [
     description:
       "Developed financial metrics such as Amount Expected, Amount Denied, and Amount Paid. Built aging reports to track transaction delays and improve payment collection, along with enhancing management dashboards.",
     tech: "Python, PostgreSQL, MySQL, React",
-    image: "https://picsum.photos/seed/senscio/600/400",
+    image: senc,
     link: "https://github.com/Ayajahamad/senscio"
   },
   {
@@ -18,7 +23,7 @@ const projects = [
     description:
       "Designed a system to automatically detect and update student attendance using facial recognition. Implemented a dashboard for faculty to monitor attendance and generate reports.",
     tech: "Python, Deep Learning, Machine Learning, React",
-    image: "https://picsum.photos/seed/attendance/600/400",
+    image: atd,
     link: "https://github.com/Ayajahamad/attendance-system"
   },
   {
@@ -34,7 +39,7 @@ const projects = [
     description:
       "Developed multiple RESTful APIs using Flask, Django, and FastAPI. Integrated Swagger for documentation and tested the APIs using Postman.",
     tech: "Flask, Django, FastAPI",
-    image: "https://picsum.photos/seed/api/600/400",
+    image: api,
     link: "https://github.com/Ayajahamad/api-projects"
   },
   {
@@ -50,7 +55,7 @@ const projects = [
     description:
       "Designed and implemented an optimized database schema for managing large-scale data with a focus on performance, scalability, and security.",
     tech: "SQL, PostgreSQL, MSSQL",
-    image: "https://picsum.photos/seed/database/600/400",
+    image: db,
     link: "https://github.com/Ayajahamad/database-design"
   }
 ];
