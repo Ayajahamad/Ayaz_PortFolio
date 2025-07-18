@@ -6,6 +6,8 @@ import bg_video from "../assets/bg_video/bg_video.mp4";
 import "./Home.css";
 
 const Home = () => {
+
+
   return (
     <div id="home" className="home-container">
       {/* Background Video */}
@@ -62,9 +64,17 @@ const Home = () => {
       </Container>
 
       {/* Scroll Arrow */}
-      <div className="scroll-arrow">
-        <FaArrowDown />
-      </div>
+      <div
+  className="scroll-arrow"
+  onClick={() => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+>
+  <FaArrowDown />
+</div>
     </div>
   );
 };

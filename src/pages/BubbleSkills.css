@@ -42,6 +42,8 @@
   position: relative;
   height: 60vh;
   width: 100%;
+  /* border: 2px solid red; */
+  overflow: hidden;
 }
 
 .floating-bubble {

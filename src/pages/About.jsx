@@ -38,6 +38,7 @@ const About = () => {
                 <Badge bg="dark">MSSQL</Badge>
                 <Badge bg="info">JavaScript</Badge>
                 <Badge bg="success" text="dark">API Development</Badge>
+                <Badge bg="primary">Azure</Badge>
               </div>
 
               <h4 className="fw-semibold mt-4">Education & Experience</h4>

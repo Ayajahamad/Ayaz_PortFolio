@@ -18,10 +18,12 @@ const skillsData = [
   { name: "React", level: 75, category: "Front End" },
   { name: "SQL", level: 80, category: "Database" },
   { name: "PostgreSQL", level: 70, category: "Database" },
+  { name: "neondb", level: 70, category: "Database" },
   { name: "MSSQL", level: 65, category: "Database" },
   { name: "Flask", level: 75, category: "Back End" },
-  { name: "Excel", level: 80, category: "Professional" },
-  { name: "PowerBI Basics", level: 60, category: "Professional" },
+  { name: "NodeJS", level: 75, category: "Back End" },
+  { name: "Excel", level: 80, category: "Tools" },
+  { name: "PowerBI", level: 60, category: "Tools" },
   { name: "FastAPI", level: 70, category: "Back End" },
   { name: "Django (API)", level: 80, category: "Back End" },
   { name: "VS Code", level: 90, category: "Tools" },
@@ -29,7 +31,11 @@ const skillsData = [
   { name: "PyCharm", level: 80, category: "Tools" },
   { name: "Postman", level: 85, category: "Tools" },
   { name: "Bootstrap", level: 80, category: "Front End" },
-  { name: "Azure", level: 80, category: "Tools" },
+  { name: "Azure", level: 80, category: "Deployment & Cloud" },
+  { name: "GitHub", level: 80, category: "Deployment & Cloud" },
+  { name: "Vercel", level: 80, category: "Deployment & Cloud" },
+  { name: "Render", level: 80, category: "Deployment & Cloud" }, 
+  { name: "Railway", level: 80, category: "Deployment & Cloud" },
 ];
 
 const categories = [
@@ -38,6 +44,7 @@ const categories = [
   { label: "Back End", value: "Back End" },
   { label: "Database", value: "Database" },
   { label: "Tools", value: "Tools" },
+  { label: "Deployment & Cloud", value: "Deployment & Cloud" },
 ];
 
 const getRandom = (min, max) => Math.random() * (max - min) + min;
@@ -86,8 +93,8 @@ const BubbleSkills = () => {
 
           <div className="floating-bubble-container position-relative">
             {filteredSkills.map((skill, index) => {
-              const left = getRandom(5, 85); // keep inside container boundaries
-              const top = getRandom(0, 80);
+              const left = getRandom(0, 88); // keep inside container boundaries
+              const top = getRandom(0, 78);
               const animation = `float${Math.floor(getRandom(1, 5))}`;
 
               return (
